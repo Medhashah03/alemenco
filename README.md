@@ -1,8 +1,8 @@
-# alemeno
-## task in the main branch
-## frontend is developed using vite + react
-## backend is developed using django
-## analysis is carried out using CV , image brightness is adjusted intitially to get better results.
+# alemeno Task
+## task folders are in the master branch
+- frontend is developed using vite + react
+- backend is developed using django
+- analysis is carried out using CV , image brightness is adjusted intitially to get better results.
 
 ### Enter the patient name and image sample
 ![image](https://github.com/Medhashah03/alemenco/assets/113727563/f74ea51b-47d0-435a-9da5-c28e0707d124)
