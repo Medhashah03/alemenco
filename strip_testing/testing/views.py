@@ -66,20 +66,21 @@ def postImageName(request):
             return Response({'image_title': imageName})
     return Response({'error': 'Invalid data provided'}, status=status.HTTP_400_BAD_REQUEST)
 
-
+import json
 #download the json result
 @api_view(['GET'])
 def downloadResult(request, imageId):
     try:
         res = Image.objects.get(id=imageId)  #id use
-        resultData = res.result
-        filePath = os.path.join('results', f'result_{imageId}.txt')
+        resultData1 = res.result
+        resultData = json.dumps(resultData1, indent=4)
+        filePath = os.path.join('results', f'result_{imageId}.json')
         os.makedirs(os.path.dirname(filePath), exist_ok=True)
         with open(filePath, 'w') as file:
             file.write(str(resultData))
         with open(filePath, 'rb') as file:
-            response = HttpResponse(file.read(), content_type='text/plain')
-            response['Content-Disposition'] = f'attachment; filename=result_{imageId}.txt'
+            response = HttpResponse(file.read(), content_type='JSON')
+            response['Content-Disposition'] = f'attachment; filename=result_{imageId}.json'
             return response
 
     except Image.DoesNotExist:
