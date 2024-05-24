@@ -1,6 +1,5 @@
 # alemeno Task
-## task folders are in the master branch
-- https://github.com/Medhashah03/alemeno/tree/master
+
 - frontend is developed using vite + react
 - backend is developed using django
 - analysis is carried out using CV , image brightness is adjusted intitially to get better results.
