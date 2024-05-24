@@ -1,8 +1,12 @@
 from django.urls import path
-from . import views
+from .views import upload_and_process_image, display_image_result , list_all_image_titles,getFromName , postImageName ,downloadResult
 
 urlpatterns = [
-    path('results/', views.image_result, name='image_result'),
-    path('upload/', views.upload_image, name='upload_image'),
-    path('', views.image_list, name='image_list'),
+    path('api/upload_image/', upload_and_process_image, name='upload_and_process_image'),
+    path('api/display_image_result/<int:image_id>/', display_image_result, name='display_image_result'),
+    path('api/image_titles/', list_all_image_titles, name='list_all_image_titles'),
+    path('api/get-result/<imageName>/', getFromName, name='getFromName'),
+    path('api/imageName/', postImageName, name='postImageName'),
+    path('api/download-result/<int:imageId>/', downloadResult, name='downloadResult'),
 ]
+

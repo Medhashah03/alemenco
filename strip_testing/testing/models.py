@@ -5,4 +5,4 @@ class Image(models.Model):
     image = models.ImageField(upload_to='images/')
     result = models.JSONField(null=True, blank=True) 
     def __str__(self):
-        return self.title,self.result
+        return self.title
