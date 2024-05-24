@@ -6,16 +6,20 @@
 # Project Setup Instructions
 
 ### Step 1: Set Up Environment
-- Ensure that your development environment is properly set up.
+- Create a virtual environment for Python 3.10
+- Activate the environment and install the dependencies using pip install -r requirements.txt
 
 ### Step 2: Download Requirements
 - Download the project requirements specified in the text file.
 
 ### Step 3: Run NPM Development Server
+- Open a terminal inside the analysis folder
+- Install dependencies using npm install
 - Execute the following command to start the NPM development server: npm run dev
 - This command will typically start a development server for your frontend code.
 
 ### Step 4: Run Django Server
+- Open a terminal inside the strip_testing folder
 - Execute the following command to start the Django server: python manage.py runserver
 - This command will start the Django development server, allowing you to run the backend of your project.
 
