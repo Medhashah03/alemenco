@@ -1,7 +1,7 @@
 # alemeno Task
 
-- frontend is developed using vite + react
-- backend is developed using django
+- frontend is developed using vite + react (analysis folder)
+- backend is developed using django (strip_testing folder)
 - analysis is carried out using CV , image brightness is adjusted intitially to get better results.
 
 ### Enter the patient name and image sample
